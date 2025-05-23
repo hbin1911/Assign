@@ -3,14 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Running build step...'
-                sh 'javac Hello.java'
+                echo 'No build step needed for JS. Moving to run...'
             }
         }
-        stage('Run') {
+        stage('Run JavaScript') {
             steps {
-                echo 'Running program...'
-                sh 'java Hello'
+                echo 'Running demo.js using Node.js...'
+                sh 'node demo.js'
             }
         }
     }
