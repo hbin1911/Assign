@@ -9,7 +9,7 @@ pipeline {
         stage('Run JavaScript') {
             steps {
                 echo 'Running demo.js using Node.js...'
-                sh 'node demo.js'
+                bat 'node demo.js'
             }
         }
     }
